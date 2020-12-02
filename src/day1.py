@@ -1,4 +1,3 @@
-from datetime import datetime
 from itertools import combinations
 from math import prod
 

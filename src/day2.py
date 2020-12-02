@@ -21,7 +21,7 @@ def count1(data):
         # count = pw.count(char[0])
         # if int(min) <= count <= int(max):
         #     total += 1
-        min, max, char, pw = line.replace('-',' ').split()
+        min, max, char, pw = line.replace('-', ' ').split()
         total += int(min) <= pw.count(char[0]) <= int(max)
     return total
 
@@ -37,7 +37,7 @@ def count2(data):
         # char = elements[2][:-1]
         # if bool(elements[3][pos1] == char) != bool(elements[3][pos2] == char):
         #     total += 1
-        pos1, pos2, char, pw = line.replace('-',' ').split()
+        pos1, pos2, char, pw = line.replace('-', ' ').split()
         total += bool(pw[int(pos1)-1] == char[0]) != bool(pw[int(pos2)-1] == char[0])
     return total
 

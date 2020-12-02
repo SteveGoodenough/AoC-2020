@@ -1,6 +1,7 @@
 import pytest
 from src.day2 import count1, count2
 
+
 @pytest.mark.parametrize(
     "data, validate_count", [
         (['1-3 a: abcde'], 1),
