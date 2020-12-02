@@ -8,6 +8,7 @@ pytest = "*"
 flake8 = "*"
 
 [packages]
+aoc = {editable = true,path = "."}
 
 [requires]
 python_version = "3.8"

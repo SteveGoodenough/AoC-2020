@@ -1,0 +1,7 @@
+.vscode/
+.pytest_cache/
+*.egg-info/
+*.pyc
+.coverage
+__pycache__/
+.python-version

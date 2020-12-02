@@ -4,7 +4,7 @@ from math import prod
 
 
 def main():
-    with open("puzzle1.txt", "r") as f:
+    with open("day1.txt", "r") as f:
         numbers = [int(line) for line in f]
 
     # 224436

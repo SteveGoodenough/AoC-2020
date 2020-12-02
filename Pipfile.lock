@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "468539137b3caa6bbea6e2a01ce30ee119af6fb27189ba9ce203ae2304f7dd0c"
+            "sha256": "6f403e511236a49fc5c9ecead47d408fad6e3e0cc0e253ee43b8b07659eef249"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -15,7 +15,12 @@
             }
         ]
     },
-    "default": {},
+    "default": {
+        "aoc": {
+            "editable": true,
+            "path": "."
+        }
+    },
     "develop": {
         "attrs": {
             "hashes": [
