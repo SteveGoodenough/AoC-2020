@@ -19,8 +19,8 @@ def count_trees(terrain, offset_x, offset_y):
     width = len(terrain[0]) - 1
     trees = 0
     x = 0
-    for line_count, line in enumerate(terrain):
-        if line_count % offset_y == 0:
+    for y, line in enumerate(terrain):
+        if y % offset_y == 0:
             trees += line[x] == "#"
             x += offset_x
             if x > width:
