@@ -39,3 +39,15 @@ def test_count_trees_with_clear_path():
         '###.',
     ]
     assert count_trees(terrain, 3, 1) == 0
+
+
+def test_count_trees_with_skipping_lines():
+    terrain = [
+        '.#########',
+        '##########',
+        '#.########',
+        '##########',
+        '##.#######',
+        '##########',
+    ]
+    assert count_trees(terrain, 1, 2) == 0
