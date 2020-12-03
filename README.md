@@ -34,3 +34,5 @@ Did this by working through the terrain and keep a count of my x position (y is 
 As the offset was variable it was easy to pass this as a parameter and worked out of the gate, but the change to the vertical offset meant I changed to an enumerate to allow me to know the line I was on and then do a mod to see if the line is processed or skipped.
 
 Getting a total just means doing all the calls and multiplying them together (didn't see a need to test this)
+
+I do like the ability to parametrize pytest tests with `@pytest.mark.parametrize`, it made extending the test using AoC's example data to cover the various offsets easy to add.
