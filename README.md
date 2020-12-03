@@ -23,3 +23,14 @@ I did steal the idea of doing the total increment based on True = 1, False = 0 b
 
 Python doesn't have an xor for the 2nd part of the challenge, but doing a `bool != bool` gave me the same thing
 
+## day 3
+
+### part 1
+
+Did this by working through the terrain and keep a count of my x position (y is the line I'm processing). After checking if there's a tree I can increment the x position by the offset (3) and if it runs off the side of the map, then just rotate back to the start by how far it went over by.
+
+### part 2
+
+As the offset was variable it was easy to pass this as a parameter and worked out of the gate, but the change to the vertical offset meant I changed to an enumerate to allow me to know the line I was on and then do a mod to see if the line is processed or skipped.
+
+Getting a total just means doing all the calls and multiplying them together (didn't see a need to test this)
