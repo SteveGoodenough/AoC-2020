@@ -16,15 +16,16 @@ def main():
 
 
 def count_trees(terrain, offset_x, offset_y):
-    width = len(terrain[0]) - 1
+    width = len(terrain[0])
     trees = 0
-    x = 0
+    x = 1
     for y, line in enumerate(terrain):
-        if y % offset_y == 0:
-            trees += line[x] == "#"
-            x += offset_x
-            if x > width:
-                x = x - width - 1
+        if y % offset_y:
+            continue
+        trees += line[x - 1] == "#"
+        x += offset_x
+        if x > width:
+            x = x % width
     return trees
 
 
