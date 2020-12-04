@@ -36,3 +36,9 @@ As the offset was variable it was easy to pass this as a parameter and worked ou
 Getting a total just means doing all the calls and multiplying them together (didn't see a need to test this)
 
 I do like the ability to parametrize pytest tests with `@pytest.mark.parametrize`, it made extending the test using AoC's example data to cover the various offsets easy to add.
+
+### day 4
+
+Yes I fell into the; do part one without thinking that "I bet part two adds validation"
+
+Sample data starting to not do enough, i.e. multiple validations all in one go, but I was in that need to get the result to get up the (private) scoreboard a bit.
