@@ -4,7 +4,7 @@ pattern = re.compile("[a-z0-9]+")
 
 
 def main():
-    with open("day4.txt", "r") as f:
+    with open("data/day4.txt", "r") as f:
         pa = f.read().splitlines()
     print(count1(pa))
     print(count2(pa))

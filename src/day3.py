@@ -1,5 +1,5 @@
 def main():
-    with open("day3.txt", "r") as f:
+    with open("data/day3.txt", "r") as f:
         terrain = f.read().splitlines()
 
     # 265

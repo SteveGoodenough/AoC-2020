@@ -1,7 +1,7 @@
 # import re
 
 def main():
-    with open("day2.txt", "r") as f:
+    with open("data/day2.txt", "r") as f:
         data = f.read().splitlines()
 
     print(count1(data))

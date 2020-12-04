@@ -3,7 +3,7 @@ from math import prod
 
 
 def main():
-    with open("day1.txt", "r") as f:
+    with open("data/day1.txt", "r") as f:
         numbers = [int(line) for line in f]
 
     # 224436
