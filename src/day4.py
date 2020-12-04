@@ -62,7 +62,7 @@ def validate(field):
     elif key == 'hcl':
         return value[:1] == "#" and len(value[1:]) == 6 and pattern.fullmatch(value[1:]) is not None
     elif key == 'ecl':
-        return value in ('amb','blu','brn','gry','grn','hzl','oth')
+        return value in ('amb', 'blu', 'brn', 'gry', 'grn', 'hzl', 'oth')
     elif key == 'pid':
         return len(value) == 9 and value.isdigit()
     elif key == 'cid':
