@@ -49,33 +49,23 @@ def count2(pa):
 def validate(field):
     key, value = field.split(":")
     if key == 'byr':
-        # byr (Birth Year) - four digits; at least 1920 and at most 2002.
-        return value.isnumeric() and (1920 <= int(value) <= 2002)
+        return value.isdigit() and (1920 <= int(value) <= 2002)
     elif key == 'iyr':
-        # iyr (Issue Year) - four digits; at least 2010 and at most 2020.
-        return value.isnumeric() and 2010 <= int(value) <= 2020
+        return value.isdigit() and 2010 <= int(value) <= 2020
     elif key == 'eyr':
-        # eyr (Expiration Year) - four digits; at least 2020 and at most 2030.
-        return value.isnumeric() and 2020 <= int(value) <= 2030
+        return value.isdigit() and 2020 <= int(value) <= 2030
     elif key == 'hgt':
-        # hgt (Height) - a number followed by either cm or in:
-        #  If cm, the number must be at least 150 and at most 193.
-        #  If in, the number must be at least 59 and at most 76.
         if value[-2:] == "cm":
-            return value[:-2].isnumeric() and 150 <= int(value[:-2]) <= 193
+            return value[:-2].isdigit() and 150 <= int(value[:-2]) <= 193
         elif value[-2:] == "in":
-            return value[:-2].isnumeric() and 59 <= int(value[:-2]) <= 76
+            return value[:-2].isdigit() and 59 <= int(value[:-2]) <= 76
     elif key == 'hcl':
-        # hcl (Hair Color) - a # followed by exactly six characters 0-9 or a-f.
         return value[:1] == "#" and len(value[1:]) == 6 and pattern.fullmatch(value[1:]) is not None
     elif key == 'ecl':
-        # ecl (Eye Color) - exactly one of: amb blu brn gry grn hzl oth.
-        return f'|{value}|' in '|amb|blu|brn|gry|grn|hzl|oth|'
+        return value in ('amb','blu','brn','gry','grn','hzl','oth')
     elif key == 'pid':
-        # pid (Passport ID) - a nine-digit number, including leading zeroes.
-        return len(value) == 9 and value.isnumeric()
+        return len(value) == 9 and value.isdigit()
     elif key == 'cid':
-        # cid (Country ID) - ignored, missing or not.
         return True
 
 
