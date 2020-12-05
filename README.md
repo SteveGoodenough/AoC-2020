@@ -42,3 +42,11 @@ I do like the ability to parametrize pytest tests with `@pytest.mark.parametrize
 Yes I fell into the; do part one without thinking that "I bet part two adds validation"
 
 Sample data starting to not do enough, i.e. multiple validations all in one go, but I was in that need to get the result to get up the (private) scoreboard a bit.
+
+### day 5
+
+Oh I wrote some rubbish before the binary hit me in refactoring, then I could simplify the first part down to one line with a function to calc the ticket id
+
+Part two is still annoying, I know there's a gap in the list, what's the quickest/neatest way to find it...
+
+And as for writing a test for part 2 meant writing a function to create a list of tickets with a gap in it.... test the test?
