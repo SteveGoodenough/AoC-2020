@@ -40,7 +40,7 @@ def _get_tickets(low, high, skip):
     for i in range(low, high):
         if i == skip:
             continue
-        b_ticket = '{0:b}'.format(i).zfill(10)
+        b_ticket = f'{i:b}'.zfill(10)
         ticket = b_ticket[:7].replace('0', 'F').replace('1', 'B') + b_ticket[-3:].replace('0', 'L').replace('1', 'R')
         tickets.append(ticket)
     return tickets
