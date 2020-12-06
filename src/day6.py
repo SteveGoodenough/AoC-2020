@@ -1,7 +1,7 @@
 def main():
     with open("data/day6.txt", "r") as f:
         data = f.read().split('\n\n')
-    
+
     print(count1(data))
     print(count2(data))
     # print(count2(data))
@@ -11,7 +11,7 @@ def main():
 def count1(data):
     total = 0
     for d in data:
-        total += len(set(list(d.replace('\n',''))))
+        total += len(set(list(d.replace('\n', ''))))
     return total
 
 

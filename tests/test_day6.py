@@ -1,9 +1,8 @@
-import pytest
 from src.day6 import count1, count2
 
 
 def test_day_total_part_one():
-    forms= """abc
+    forms = """abc
 
 a
 b
@@ -23,7 +22,7 @@ b"""
 
 
 def test_day_total_part_two():
-    forms= """abc
+    forms = """abc
 
 a
 b
