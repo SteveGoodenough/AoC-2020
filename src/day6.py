@@ -8,10 +8,7 @@ def main():
 
 # 6387
 def count1(data):
-    total = 0
-    for d in data:
-        total += len(set(list(d.replace('\n', ''))))
-    return total
+    return sum(len(set(d.replace('\n', ''))) for d in data)
 
 
 # 3039
@@ -19,9 +16,7 @@ def count2(data):
     total = 0
     for groups in data:
         people = [set(list(group)) for group in groups.split('\n')]
-        for person in people[1:]:
-            people[0].intersection_update(person)
-        total += len(people[0])
+        total += len(people[0].intersection(*people))
     return total
 
 

@@ -61,3 +61,7 @@ This did mean I needed to sort tests and how to pass in a multi line string and 
 Part one pretty easy, remove newlines in data, use list to break all the string into individual characters and then use a set to get unique values. Then just count the length and add to the total. I bet this is easier in functional languages.
 
 Part two then breaks the above that we need to consider the common values for each passenger (line)... hmmm intersection useful here? yes it was
+
+[later] refactoring, I got part 1 down to 1 line, must remember to use sum() more often
+
+part 2 condensed things by using *args for the intersection, but cant see how to reduce it further
