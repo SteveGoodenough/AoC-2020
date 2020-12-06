@@ -4,7 +4,6 @@ def main():
 
     print(count1(data))
     print(count2(data))
-    # print(count2(data))
 
 
 # 6387
