@@ -37,16 +37,27 @@ Getting a total just means doing all the calls and multiplying them together (di
 
 I do like the ability to parametrize pytest tests with `@pytest.mark.parametrize`, it made extending the test using AoC's example data to cover the various offsets easy to add.
 
-### day 4
+## day 4
 
 Yes I fell into the; do part one without thinking that "I bet part two adds validation"
 
 Sample data starting to not do enough, i.e. multiple validations all in one go, but I was in that need to get the result to get up the (private) scoreboard a bit.
 
-### day 5
+## day 5
 
 Oh I wrote some rubbish before the binary hit me in refactoring, then I could simplify the first part down to one line with a function to calc the ticket id
 
 Part two is still annoying, I know there's a gap in the list, what's the quickest/neatest way to find it...
 
 And as for writing a test for part 2 meant writing a function to create a list of tickets with a gap in it.... test the test?
+
+
+## day 6
+
+Another input data where each group can bve over multiple lines, so switch to reading data split by 2 line breaks `\n\n` rather than each line. I didn't think this would include the last line but it does (could go back and refactor the earlier days but onwards...)
+
+This did mean I needed to sort tests and how to pass in a multi line string and parse into same list as the file input does to then enable calling the functions.
+
+Part one pretty easy, remove newlines in data, use list to break all the string into individual characters and then use a set to get unique values. Then just count the length and add to the total. I bet this is easier in functional languages.
+
+Part two then breaks the above that we need to consider the common values for each passenger (line)... hmmm intersection useful here? yes it was
