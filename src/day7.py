@@ -15,7 +15,7 @@ def count1(data):
 def count(colour, rules):
     result = []
     for parent, children in rules.items():
-        for _ ,child_colour in children:
+        for _, child_colour in children:
             if colour in child_colour:
                 result.append(parent)
                 result = result + count(parent, rules)
@@ -41,9 +41,9 @@ def get_rules(data):
             i = 4
             while i < len(line):
                 child = line[i + 1] + line[i + 2]
-                children.append((int(line[i]),child))
+                children.append((int(line[i]), child))
                 i += 4
-        rules[parent]=children
+        rules[parent] = children
     return rules
 
 
