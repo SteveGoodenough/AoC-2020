@@ -72,3 +72,11 @@ Recursion again to work through the list of parent/children and count it all up.
 Now I have 2 rules generators so refactored into a single one, but it complicated part 1 (as I needed to ignore the number and just look at colours)
 
 > If this is the step up for day 7, I dread to think of tomorrow...
+
+## day 8
+
+Part 1 seemed ok but needs refactoring after my q&d stab at it
+
+Part 2 recursion again, modified part 1 to be able to be called with the modified program (jmp/nop change) to see if it'd complete to the end. I used negative to indicate it had, ok for here but what if the answer had been a negative? Well, it wasn't and that's all that matters here.
+
+I've now got 2 processors that are similar, so more refactoring to do.
