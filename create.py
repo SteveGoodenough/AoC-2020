@@ -2,13 +2,24 @@
 import sys
 import os
 
-src_base = """
+src_base = """from time import time
+
+
 def main():
     with open("data/day{day}.txt", "r") as f:
-        data = f.read().split('\\n\\n')
+        data = [line.split() for line in f.readlines()]
+        # data = f.read().split('\\n\\n')
+        # data = [int(line) for line in f]
     
+    time_start = time()
     print(count1(data))
+    time_part1 = time()
+
     print(count2(data))
+    time_part2 = time()
+
+    print(f'Part one time: {1000*(time_part1-time_start):.0f}ms')
+    print(f'Part two time: {1000*(time_part2-time_part1):.0f}ms')
 
 
 # 
