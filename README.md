@@ -91,4 +91,24 @@ Part one seemed ok, if a little long winded with the solution. I sort of feel th
 I did an alternative but it banks on the number of single jolt steps being less than 10000 (storing both single and triple counts in one number and then splitting it out at the end but it did let me do an if/else on one line)
 
 ### part 2
-Not time today to do that one
+
+Not a good thing to see...
+
+`tests/test_day10.py ...[1]    78250 killed     pytest tests/test_day10.py`
+
+Different approach, working though the sorted list and looking backwards for possible arrangements.
+
+The first set of test data nearly led me down a "to the power of two" route;
+```
+ 1   1  1  2  4  4   4   8   8   8   8   8       <- arrangements
+(0), 1, 4, 5, 6, 7, 10, 11, 12, 15, 16, 19, (22)
+(0), 1, 4, 5,    7, 10, 11, 12, 15, 16, 19, (22)
+(0), 1, 4, 5,    7, 10,     12, 15, 16, 19, (22)
+(0), 1, 4, 5, 6, 7, 10,     12, 15, 16, 19, (22)
+(0), 1, 4,    6, 7, 10, 11, 12, 15, 16, 19, (22)
+(0), 1, 4,    6, 7, 10,     12, 15, 16, 19, (22)
+(0), 1, 4,       7, 10, 11, 12, 15, 16, 19, (22)
+(0), 1, 4,       7, 10,     12, 15, 16, 19, (22)
+```
+
+but luckily there was another sample set with a total of 19208 so that idea was out the window

@@ -40,10 +40,18 @@ def count1alt(data):
     return total // 10000 * total % 10000
 
 
-# 
+# 453551299002368
 def count2(data):
-    total = 0
-    return total
+    sorted_data = [0] + sorted(data)
+    arrangements = {}
+    arrangements[0] = 1
+    for i in range(1, len(sorted_data)):
+        arrangements[i] = 0
+        for j in range(i - 1, -1, -1):
+            if sorted_data[i] - sorted_data[j] > 3:
+                break
+            arrangements[i] += arrangements[j]
+    return arrangements[len(sorted_data)-1]
 
 
 if __name__ == "__main__":
