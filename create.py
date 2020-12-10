@@ -10,7 +10,7 @@ def main():
         data = [line.split() for line in f.readlines()]
         # data = f.read().split('\\n\\n')
         # data = [int(line) for line in f]
-    
+
     time_start = time()
     print(count1(data))
     time_part1 = time()
@@ -38,19 +38,25 @@ if __name__ == "__main__":
     main()
 """
 
-test_base = """
-import pytest
+test_base = """import pytest
 from src.day{day} import count1, count2
 
 
 def test_part_one():
-    pass
+    input_data = '''
+'''
+    data = [int(line) for line in input_data.splitlines()]
+
+    assert count1(data) == 0
 
 
 def test_part_two():
-    pass
-"""
+    input_data = '''
+'''
+    data = [int(line) for line in input_data.splitlines()]
 
+    assert count2(data) == 0
+"""
 
 def main():
     if len(sys.argv) > 1:
@@ -65,7 +71,7 @@ def create_file(day, src_path, template):
     print(f'Create {src_path}...')
     if not os.path.exists(src_path):
         with open(src_path, "w") as f:
-            f.write(template.replace('{day}', str(day)))
+            f.write(template.replace('{day}', str(day)).replace("'''", '"""'))
     else:
         print('Already exists, not overwriting')
 
