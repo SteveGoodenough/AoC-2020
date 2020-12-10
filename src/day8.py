@@ -23,7 +23,7 @@ def count1(data):
         argument = int(data[current_line][1])
         if operation == "acc":
             accumulator += argument
-        
+
         if operation == "jmp":
             current_line += argument
         else:
