@@ -81,3 +81,14 @@ Part 2 recursion again, modified part 1 to be able to be called with the modifie
 I've now got 2 processors that are similar, so more refactoring to do.
 
 ## day 9
+Not much to say other than this seemed easier than yesterday. 
+
+Added some timings to the 2 parts as some people want to compare those
+
+## day 10
+Part one seemed ok, if a little long winded with the solution. I sort of feel there's a way to reduce this?
+
+I did an alternative but it banks on the number of single jolt steps being less than 10000 (storing both single and triple counts in one number and then splitting it out at the end but it did let me do an if/else on one line)
+
+### part 2
+Not time today to do that one
