@@ -121,6 +121,8 @@ Lots of string mashing here and I'm not totally happy with it, but it gave me th
 
 Part 2... just not enough time today to get on to it :(
 
+A day later, came back to it and got the answer but this code needs refactoring heavily. My solution for reading the 8 directions for the first non space is just horrible.
+
 ## day 12
 
 At first I thought this was going to be complex with 0-360 degrees with the turn left/right but looking at the data showed it was all in 90, 180, 270 values so could keep to tracking the offsets in whole numbers.
