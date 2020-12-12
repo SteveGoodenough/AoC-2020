@@ -19,80 +19,53 @@ def main():
     print(f'Part two time: {1000*(time_part2-time_part1):.0f}ms')
 
 
-directions = "ESWNESW"
+directions = "ESWN" * 2
+movement = {'N': (1, 0), 'S': (-1, 0), 'E': (0, 1), 'W': (0, -1)}
 
 
 # 2280
 def count1(data):
     direction = "E"
-    n = 0
-    e = 0
-    for i in data:
-        cmd = i[:1]
-        dist = int(i[1:])
-        # print(c, v)
-        if cmd == "N":
-            n += dist
-        elif cmd == "S":
-            n -= dist
-        elif cmd == "E":
-            e += dist
-        elif cmd == "W":
-            e -= dist
+    north = 0
+    east = 0
+    for line in data:
+        cmd = line[0]
+        dist = int(line[1:])
+        if cmd in "NSEW":
+            north += dist * movement[cmd][0]
+            east += dist * movement[cmd][1]
         elif cmd == "F":
-            if direction == "E":
-                e += dist
-            elif direction == "W":
-                e -= dist
-            elif direction == "S":
-                n -= dist
-            else:
-                n += dist
+            north += dist * movement[direction][0]
+            east += dist * movement[direction][1]
         elif cmd == "L":
             direction = directions[directions.find(direction) + 4 - dist // 90]
         elif cmd == "R":
             direction = directions[directions.find(direction) + dist // 90]
-    return abs(n) + abs(e)
+    return abs(north) + abs(east)
 
 
 # 38693
 def count2(data):
-    n = 0
-    e = 0
-    wn = 1
-    we = 10
-    for i in data:
-        c = i[:1]
-        v = int(i[1:])
-        # print(c, v, e, n, we, wn)
-        # waypoint move
-        if c == "N":
-            wn += v
-        elif c == "S":
-            wn -= v
-        elif c == "E":
-            we += v
-        elif c == "W":
-            we -= v
-        elif c == "L":
-            for r in range(v // 90):
-                t = we
-                we = -wn
-                wn = t
-        elif c == "R":
-            for r in range(v // 90):
-                t = wn
-                wn = -we
-                we = t
-        elif c == "F":
-            e += we * v
-            n += wn * v
-        else:
-            print(f'unknown command {i}')
-            break
-    # print(abs(n), abs(e))
-    total = abs(n) + abs(e)
-    return total
+    north = 0
+    east = 0
+    waypoint_north = 1
+    waypoint_east = 10
+    for line in data:
+        cmd = line[0]
+        dist = int(line[1:])
+        if cmd in "NSEW":
+            waypoint_north += dist * movement[cmd][0]
+            waypoint_east += dist * movement[cmd][1]
+        elif cmd == "L":
+            for _ in range(dist // 90):
+                waypoint_north, waypoint_east = waypoint_east, -waypoint_north
+        elif cmd == "R":
+            for _ in range(dist // 90):
+                waypoint_north, waypoint_east = -waypoint_east, waypoint_north
+        elif cmd == "F":
+            east += waypoint_east * dist
+            north += waypoint_north * dist
+    return abs(north) + abs(east)
 
 
 if __name__ == "__main__":
