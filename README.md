@@ -112,3 +112,11 @@ The first set of test data nearly led me down a "to the power of two" route;
 ```
 
 but luckily there was another sample set with a total of 19208 so that idea was out the window
+
+## day 11
+
+Well the game of life sprung to mind, but rather than 2 states we have 3.
+
+Lots of string mashing here and I'm not totally happy with it, but it gave me the answer.
+
+Part 2... just not enough time today to get on to it :(
