@@ -120,3 +120,13 @@ Well the game of life sprung to mind, but rather than 2 states we have 3.
 Lots of string mashing here and I'm not totally happy with it, but it gave me the answer.
 
 Part 2... just not enough time today to get on to it :(
+
+## day 12
+
+At first I thought this was going to be complex with 0-360 degrees with the turn left/right but looking at the data showed it was all in 90, 180, 270 values so could keep to tracking the offsets in whole numbers.
+
+A number of refactors once I got the answers to shrink checking individual movement directions into a single action.
+
+Part 2 meant I basically copied part 1 and modified it for the change with waypoints and rotating the waypoint.
+
+Not a bad day today time wise (but I still can't get up at 5am top try to beat some of my colleagues)
