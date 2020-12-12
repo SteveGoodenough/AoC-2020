@@ -1,4 +1,3 @@
-import pytest
 from src.day11 import count1, count2, calc_grid
 
 

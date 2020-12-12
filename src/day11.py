@@ -63,7 +63,7 @@ def count_adjacent(grid, x, y):
     return adjacent
 
 
-# 
+#
 def count2(data):
     total = 0
     return total
