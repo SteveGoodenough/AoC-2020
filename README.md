@@ -132,3 +132,15 @@ A number of refactors once I got the answers to shrink checking individual movem
 Part 2 meant I basically copied part 1 and modified it for the change with waypoints and rotating the waypoint.
 
 Not a bad day today time wise (but I still can't get up at 5am top try to beat some of my colleagues)
+
+# day 13
+
+part one was ok but part two was a real challenge today... maths :(
+
+I got a clue from the team slack channel... chinese remainder theorem
+
+Googling took me here https://docs.sympy.org/latest/modules/ntheory.html
+but I just couldn't get my head round it, tried using the ctrl, ctr1, ctr2 and solve_congruence functions but just could not get the examples given to get the result required. solve_congruence sounded right but using the examples given I could not get the supplied answer.
+
+Looks like this is going to be one star I won't be getting.
+
