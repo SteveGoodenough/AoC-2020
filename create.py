@@ -7,7 +7,8 @@ src_base = """from time import time
 
 def main():
     with open("data/day{day}.txt", "r") as f:
-        data = [line.split() for line in f.readlines()]
+        data = f.read().splitlines()
+        # data = [line.split() for line in f.readlines()]
         # data = f.read().split('\\n\\n')
         # data = [int(line) for line in f]
 
@@ -45,17 +46,20 @@ from src.day{day} import count1, count2
 def test_part_one():
     input_data = '''
 '''
-    data = [int(line) for line in input_data.splitlines()]
+    data = [line for line in input_data.splitlines()]
+    # data = [int(line) for line in input_data.splitlines()]
+    # data = [line.split() for line in input_data.split('\\n')]
+    print(data)
 
     assert count1(data) == 0
 
 
-def test_part_two():
-    input_data = '''
-'''
-    data = [int(line) for line in input_data.splitlines()]
-
-    assert count2(data) == 0
+# def test_part_two():
+#     input_data = '''
+# '''
+#     data = [int(line) for line in input_data.splitlines()]
+# 
+#     assert count2(data) == 0
 """
 
 def main():
