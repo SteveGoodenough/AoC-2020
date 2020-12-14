@@ -1,4 +1,3 @@
-import pytest
 from src.day13 import count1, count2
 
 

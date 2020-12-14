@@ -32,7 +32,7 @@ def count1(data):
     return the_bus * time_diff
 
 
-# 
+#
 def count2(data):
     return 3417
 
