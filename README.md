@@ -133,7 +133,7 @@ Part 2 meant I basically copied part 1 and modified it for the change with waypo
 
 Not a bad day today time wise (but I still can't get up at 5am top try to beat some of my colleagues)
 
-# day 13
+## day 13
 
 part one was ok but part two was a real challenge today... maths :(
 
@@ -144,3 +144,12 @@ but I just couldn't get my head round it, tried using the ctrl, ctr1, ctr2 and s
 
 Looks like this is going to be one star I won't be getting.
 
+## day 14
+
+part one, turning numbers to bit strings, applying mask, bit strings to numbers, oh boy got to be a better way. But I got the answer.
+
+part two, again lots of strings, using new rules for masking the address first, then I created a function to burst out the masked address by replacing each occurrence of 'X' with a '1' and '0', adding those to a new list, then rinse and repeat until I get a list of values with no 'X's
+
+python's base option in an `int` is useful here, `int('1010', 2) = 10`
+
+Also made use of `defaultdict` from `collections`, handy for avoiding missing keys in a dictionary
