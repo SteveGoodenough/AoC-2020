@@ -153,3 +153,11 @@ part two, again lots of strings, using new rules for masking the address first, 
 python's base option in an `int` is useful here, `int('1010', 2) = 10`
 
 Also made use of `defaultdict` from `collections`, handy for avoiding missing keys in a dictionary
+
+## day 15
+
+Part one, build a list of the number, index back through them to see when the number was last used. Ok for part one.... NOT for part two when it's now 30 million iterations.
+
+Part two means a rethink of part one's solution as it's way too slow and memory hungry
+
+Got a better solution, keeping a dictionary of a number and the last time it was last used. However with 30,000,000 iterations it takes 7.5secs to do a run. But I got the answer so that's a star.
