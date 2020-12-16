@@ -161,3 +161,9 @@ Part one, build a list of the number, index back through them to see when the nu
 Part two means a rethink of part one's solution as it's way too slow and memory hungry
 
 Got a better solution, keeping a dictionary of a number and the last time it was last used. However with 30,000,000 iterations it takes 7.5secs to do a run. But I got the answer so that's a star.
+
+# day 16
+
+Parsing was a pita. Started with parsing into rules, but then what part one needed changed my approach...
+
+Part one, dictionary of numbers and rules they apply too (guessing they may be needed for part 2), then count values not found in the dictionary.
