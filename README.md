@@ -166,4 +166,6 @@ Got a better solution, keeping a dictionary of a number and the last time it was
 
 Parsing was a pita. Started with parsing into rules, but then what part one needed changed my approach...
 
-Part one, dictionary of numbers and rules they apply too (guessing they may be needed for part 2), then count values not found in the dictionary.
+Part one, list of numbers, then count values not found in the list.
+
+Part two, no more time today
